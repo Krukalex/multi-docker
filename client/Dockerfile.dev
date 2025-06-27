@@ -2,8 +2,12 @@ FROM node:20-alpine
 
 WORKDIR /app
 
+# Ensure we force install all deps (not just production)
+ENV NODE_ENV=development
+
 COPY package*.json ./
 RUN npm install
+
 COPY . .
 
-CMD [ "npm", "start" ]
+CMD ["npm", "start"]
