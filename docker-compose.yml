@@ -4,7 +4,7 @@ services:
     image: "krukalex/multi-client"
     mem_limit: 128m
     hostname: client
-  server:
+  api:
     image: "krukalex/multi-server"
     mem_limit: 128m
     hostname: api
